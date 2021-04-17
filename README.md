@@ -27,9 +27,9 @@ Just run `npm start` to development and `npm run build` to build production arch
 
 ```
 > npm start         Start development server (host is localhost).
-> npm start:local   Start development server (host is local network ip).
-> npm lint          Check syntax.
-> npm run build     Build production files and archive.
+> npm run start:local   Start development server (host is local network ip).
+> npm run lint          Check syntax.
+> npm run run build     Build production files and archive.
 ```
 
 
