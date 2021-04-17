@@ -1,5 +1,7 @@
 # WebGL JavaScript Starter 
 
+**BETA VERSION STATUS You can use it, but I don't tested it very well.**
+
 This is a simple starter pack for non-js programmers or juniors. With it you can make webgl shaders and mint archived build at https://hicatnunc.xyz.
 
 ## Install
@@ -44,7 +46,7 @@ Just run `npm start` to development and `npm run build` to build production arch
 
 <a name="hot"><h3>Hot Reloading</h3></a>
 
-This project contains already configured [Webpack]() and [Webpack Dev Server](). This is the tools to provide realtime development and production builds.
+This project contains already configured [Webpack](https://github.com/webpack/webpack) and [Webpack Dev Server](https://github.com/webpack/webpack-dev-server). This is the tools to provide realtime development and production builds.
 
 <a name="modules"><h3>Javascript Modules</h3></a>
 
@@ -52,7 +54,7 @@ Your JS modules aliases. You can import from '@name/file' instead of '../../../.
 
 <a name="syntax"><h3>Syntax Checker</h3></a>
 
-This is not required but very useful tool. You can get more information in the official [ESlint documentation]().
+This is not required but very useful tool. You can get more information in the official [ESlint documentation](https://eslint.org/).
 
 <a name="hen"><h2>Hicatnunc Prepared</h2></a>
 
@@ -84,3 +86,8 @@ You can change output archive name in `/config/archiveBuildToZip.js` file:
 ```js
 const outputFilePath = Path.resolve(sourcePath, 'archive.zip');
 ```
+
+
+## Support
+
+If you want you can support me and this project – [just buy some of my artworks](https://www.hicetnunc.xyz/tz/tz1exaxBAyyRnR2KUf11VjF7tDTpVcDbxrAJ).
