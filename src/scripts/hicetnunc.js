@@ -15,7 +15,7 @@ export function initHenVariables() {
 
     if (process.env.NODE_ENV === 'development') {
         console.log('[DEV] Simulated:', window.hen);
-        console.log('[DEV] Now you can use global defined variable: %c%s', 'color: blue', 'window.hen.creator')
+        console.log('[DEV] Now you can use global defined variable: %c%s', 'color: blue', 'window.hen.viewver')
         console.log('');
     }
 }
