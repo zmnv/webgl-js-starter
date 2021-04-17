@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "Start Development"
+		},
+		{
+			"type": "npm",
+			"script": "start:local",
+			"problemMatcher": [],
+			"label": "npm: start:local",
+			"detail": "Start Development and make it visible inside your local network"
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "Build Production"
+		}
+	]
+}

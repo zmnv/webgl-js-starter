@@ -1,0 +1,40 @@
+{
+  "name": "js-webgl-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
+    "start": "webpack serve --config webpack/webpack.config.dev.js",
+    "start:local": "cross-env LOCALNETWORK=true npm run start"
+  },
+  "keywords": [
+    "webgl",
+    "glsl",
+    "reloading",
+    "builder"
+  ],
+  "author": "[Valeriy Zimnev](https://github.com/zmnv)",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.2",
+    "dotenv": "^8.2.0",
+    "esbuild-loader": "^2.12.0",
+    "eslint": "^7.24.0",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "live-server": "^1.2.1",
+    "mini-css-extract-plugin": "^1.4.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  }
+}
