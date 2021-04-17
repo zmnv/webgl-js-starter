@@ -1,11 +1,10 @@
 {
   "name": "webgl-js-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "script.js",
+  "description": "Javascript Webgl starter pack with webpack, esbuild, eslint and etc.",
   "scripts": {
     "lint": "eslint ./src",
-    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.prod.js && node ./config/archiveBuildToZip",
     "start": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.config.dev.js",
     "start:local": "cross-env LOCALNETWORK=true npm run start",
     "postinstall": "node ./config/postinstall.js"
@@ -19,6 +18,7 @@
   "author": "[Valeriy Zimnev](https://github.com/zmnv)",
   "license": "MIT",
   "devDependencies": {
+    "archiver": "^5.3.0",
     "chalk": "^4.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^8.1.1",
