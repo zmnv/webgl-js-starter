@@ -5,6 +5,15 @@ const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common.js');
 const getLocalIpAddress = require('./getLocalIpAddress.js').default;
+const chalk = require('chalk');
+
+// [hicetnunc] ––––––––––––––––––––––––––––––––––––––––––––––––––
+console.log('');
+console.log(chalk.magentaBright.bold`[HEN] Development environment variables:`);
+console.log('process.env.HEN_CREATOR', process.env.HEN_CREATOR);
+console.log('process.env.HEN_VIEWER', process.env.HEN_VIEWER);
+console.log('');
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
 module.exports = merge(common, {
   mode: 'development',
@@ -20,8 +29,10 @@ module.exports = merge(common, {
     host: process.env.LOCALNETWORK ? getLocalIpAddress() : undefined,
     stats: 'errors-only',
 
-    // FYI: If you want to mint at https://hicetnunc.xyz you can uncomment the code below:
+    // [hicetnunc] ––––––––––––––––––––––––––––––––––––––––––––––––––
+    // Remove the code below if you want to run developing WITHOUT hicetnunc OBJKT iframe simulation: 
     openPage: [`?creator=${process.env.HEN_CREATOR || ''}&viewer=${process.env.HEN_VIEWER || 'false'}`],
+    // ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   },
   plugins: [
     new Webpack.DefinePlugin({

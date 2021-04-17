@@ -1,14 +1,22 @@
-import { getRandomNumber } from './utils';
+import { getRandomNumber } from './utils/getRandom';
 
-const creatorFromUrl = new URLSearchParams(window.location.search).get("creator");
-const viewerFromUrl = new URLSearchParams(window.location.search).get("viewer");
+export function initHenVariables() {
 
-const creator = creatorFromUrl;
-const viewer = (viewerFromUrl === 'false' || !viewerFromUrl) ? `spectator_${getRandomNumber()}` : viewerFromUrl;
+    const creatorFromUrl = new URLSearchParams(window.location.search).get("creator");
+    const viewerFromUrl = new URLSearchParams(window.location.search).get("viewer");
 
-window.hen = {
-    creator,
-    viewer,
-};
+    const creator = creatorFromUrl;
+    const viewer = (viewerFromUrl === 'false' || !viewerFromUrl) ? `spectator_${getRandomNumber()}` : viewerFromUrl;
 
-console.log('window', window.hen);
+    window.hen = {
+        creator,
+        viewer,
+    };
+
+    if (process.env.NODE_ENV === 'development') {
+        console.log('[DEV] Simulated:', window.hen);
+        console.log('[DEV] Now you can use global defined variable: %c%s', 'color: blue', 'window.hen.creator')
+        console.log('');
+    }
+}
+

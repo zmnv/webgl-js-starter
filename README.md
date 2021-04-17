@@ -14,3 +14,7 @@ But! There is a problem. You can't get this infromation until you mint an OBJKT.
 ```
 
 ```
+
+
+https://github.com/benmosher/eslint-plugin-import#typescript
+

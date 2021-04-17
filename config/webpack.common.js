@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const Path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -17,6 +19,7 @@ module.exports = {
       name: false,
     },
   },
+  target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -31,9 +34,18 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/index.html'),
     }),
   ],
+  // [FYI] –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  // You can import your files without the relative path issues like:
+  // Before: '../../../../getRandomNumber'
+  // After: '@utils/getRandomNumber'
+  //
+  // Read more: https://webpack.js.org/configuration/resolve/
+  // –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   resolve: {
     alias: {
-      '~': Path.resolve(__dirname, '../src'),
+      '@src': Path.resolve(__dirname, '../src'),
+      '@scripts': Path.resolve(__dirname, '../src/scripts'),
+      '@utils': Path.resolve(__dirname, '../src/scripts/utils'),
     },
   },
   module: {
@@ -59,7 +71,7 @@ module.exports = {
         test: /\.js$/,
         loader: 'esbuild-loader',
         options: {
-          // loader: 'jsx',  // Remove this if you're not using JSX
+          // loader: 'jsx', // Remove this if you're not using JSX
           target: 'es2015'  // Syntax to compile to (see options below for possible values)
         }
       },
