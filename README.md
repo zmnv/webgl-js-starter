@@ -1,6 +1,6 @@
 # WebGL JavaScript Starter 
 
-**BETA VERSION STATUS You can use it, but I don't tested it very well.**
+**BETA VERSION STATUS. You can use it, but I don't tested it very well.**
 
 This is a simple starter pack for non-js programmers or juniors. With it you can make webgl shaders and mint archived build at https://hicatnunc.xyz.
 
@@ -50,7 +50,7 @@ This project contains already configured [Webpack](https://github.com/webpack/we
 
 <a name="modules"><h3>Javascript Modules</h3></a>
 
-Your JS modules aliases. You can import from '@name/file' instead of '../../../../file'. If you don't need this you can do nothing or just comment some code in `config/` 
+Your JS modules aliases. You can import from `@name/file` instead of `../../../../file`. If you don't need this you can do nothing or just comment some code in `config/` 
 
 <a name="syntax"><h3>Syntax Checker</h3></a>
 
